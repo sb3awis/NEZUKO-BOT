@@ -952,7 +952,7 @@ export async function handler(chatUpdate) {
                     simi: false,
                     expired: 0,
                     rpgs: false,
-                    games: false
+                    games: true
                 }
             let settings = global.db.data.settings[this.user.jid]
             if (typeof settings !== 'object') global.db.data.settings[this.user.jid] = {}
@@ -972,7 +972,7 @@ export async function handler(chatUpdate) {
                 self: false,
                 autoBio: false,
                 adminonly: false,
-                autoread: true,
+                autoread: false,
                 antiCall: true, 
                 restrict: true,
                 image: true,
@@ -1555,7 +1555,7 @@ async function getMessage(key){
             return msg?.message
         }
         return {
-            conversation: "My name is Silana Ai"
+            conversation: "My name is nezuko"
         }
     }
 async function appenTextMessage(text, chatUpdate) {
@@ -1656,7 +1656,7 @@ let msg = {
         adminonly: 'تم تعطيل الخاصية للأعضاء',
         premiumonly: `📢 لا يمكنك الوصول إلى الميزة ❗\nقم بشراء الإصدار المميز للوصول إليها عبر جهاز الكمبيوتر.\ncontact the owner below\nwa.me/${global.info.nomerown}`,
         groups: 'الميزة حاليًا نشطة للمجموعات فقط.',
-        gconly: `📢 لا يمكنك الوصول إلى ميزة ❗\nانضم إلى مجموعة Silana Bot لتتمكن من الوصول\n\n> ${global.url.sgc}`,
+        gconly: `📢 لا يمكنك الوصول إلى ميزة ❗\nانضم إلى مجموعة Nezuko Bot لتتمكن من الوصول\n\n> ${global.url.sgc}`,
         game: 'الميزة *اللعبة* لم يتم تشغيلها لهذه الدردشة',
         rpg: 'الميزة *Rpg* لم يتم تشغيلها لهذه الدردشة',
         rowner: 'ميزة خاصة للمالك الحقيقي، *المستخدمون* لا يمكنهم الوصول إليها :!',
@@ -1679,7 +1679,7 @@ let msg = {
     let daftar = {
   unreg: `\`أنت لم تسجل بعد في قاعدة البيانات. سجل فورا عن طريق الكتابة:\`
   
-- /daftar name. age\n\n قبل ان تضغط على زر تسجيل الدخول رجاء تأكد أنك مشترك في قناتي على الواتساب \n\n https://whatsapp.com/channel/0029VaX4b6J7DAWqt3Hhu01A`}[type]
+- /daftar name. age\n\n قبل ان تضغط على زر تسجيل الدخول رجاء تأكد أنك مشترك في قناتي على الواتساب \n\n https://www.whatsapp.com/channel/0029VagcivA5Ejxr4OQD5S1D`}[type]
   
   if (daftar) return this.sendUrlImageButton(m.chat, daftar, [{name: "quick_reply", buttonParamsJson: `{"display_text": "تسجيل الدخول", "id": "@verify"}`}], wm, registrasi, fkon)
         }
